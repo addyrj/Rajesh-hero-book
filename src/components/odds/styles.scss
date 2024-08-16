@@ -1,0 +1,132 @@
+@import "../../styles/variables/mixins";
+
+.odds-row-container {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ccc;
+
+    @include media(phone) {
+        flex-direction: column;
+        gap: 0 !important;
+    }
+
+    .odds-row-left-col {
+        @include media(phone) {
+            width: calc(100% - 10px);
+            align-items: end;
+            padding-right: 5px;
+        }
+
+        span {
+            color: #333;
+            display: inline-block;
+            max-width: calc(100% - 100px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: flex;
+
+            @include media(phone) {
+                width: auto;
+                max-width: calc(100% - 0px);
+                white-space: initial;
+                font-weight: bold;
+                flex-direction: column;
+
+            }
+
+            p {
+                font-weight: 400;
+                @include media(phone) {
+                    font-size: 12px;
+    
+                }
+            }
+        }
+
+        .icon-di {
+            svg{
+                @include media(phone){
+
+                    font-size: 13px;
+                }
+            }
+            // .active-match {
+            //     background-color: #28a745;
+            //     height: 10px;
+            //     width: 10px;
+            //     display: block;
+            //     border-radius: 100px;
+            // }
+
+            img {
+                width: 20px;
+                @include media(phone){
+
+                    width: 15px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .odds-row-right-col {
+        width: 40%;
+
+        .lock-odds {
+            svg {
+                color: white;
+            }
+        }
+
+        @include media(phone) {
+            width: 100%;
+        }
+
+        ul {
+
+            margin: 0%;
+            padding: 0%;
+            // margin-top: 20px;
+            li{
+
+                @include media(phone){
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+.odd-box {
+    padding: 1px;
+    width: 100%;
+    text-align: center;
+@include media(phone){
+    padding: 0px; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .bet-odd {
+        color: #273a47;
+        font-size: 14px;
+    }
+}
+
+.back {
+    background-color: #72bbef;
+}
+
+.lay {
+    background-color: #faa9ba;
+}
+
+.odd-row-header {
+    .odds-row-left-col {
+        @include media(phone) {
+
+            display: none;
+        }
+    }
+}

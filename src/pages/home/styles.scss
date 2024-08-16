@@ -1,0 +1,18 @@
+@import "../../styles/variables/mixins";
+.odd-container-m{
+    @include media(phone){
+        max-height: 250px;
+        padding: .625rem;
+        overflow-y: scroll;
+        background-color: #f7f7f7;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+}
+.upcoming-event{
+    overflow-x: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}

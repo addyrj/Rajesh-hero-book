@@ -1,0 +1,30 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+}
+body{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.back2{
+  background-color: #72bbef7f;
+}
+.back1{
+  background-color: #72bbefbf;
+}
+.lay1{
+  background-color: #faa9babf;
+}
+.lay2 {
+  background-color: #faa9ba7f !important;
+}
+.shadow-container{
+
+  box-shadow: 0 0 5px #a4a4a4;
+  border-radius: 5px
+  
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

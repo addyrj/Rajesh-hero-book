@@ -1,0 +1,63 @@
+@import "../../styles/variables/mixins";
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+    }
+    .blink_me {
+        animation: blink 1s linear infinite;
+        display: flex;
+        align-items: center;
+    }
+    .latest-events {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        @include media(phone){
+          width: calc(100% - 10px);
+          margin: auto;
+        }
+      }
+      
+      .latest-event-item {
+        flex: 1;
+        max-width: 100%;
+        min-width: calc(20% - 10px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        background: #2C3E50;
+        border-radius: 4px;
+        color: #FFFFFF;
+        margin-bottom: 5px;
+        @include media(phone){
+          margin-bottom: 0%;
+        }
+        a {
+          color: var(--text-secondary);
+          font-size: 14px;
+          font-weight: bold;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          span {
+            margin-left: 5px;
+            white-space: nowrap;
+            height: auto;
+            max-width: calc(100% - 42px);
+            width: 100%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+          .me-1 {
+            margin-right: .25rem !important;
+        }
+      }
+      }
+      
